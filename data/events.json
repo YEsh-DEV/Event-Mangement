@@ -1,0 +1,68 @@
+[
+    {
+        "id": "EVT-101",
+        "title": "Python Developer Summit 2026",
+        "category": "Technology",
+        "date": "2026-09-15",
+        "time": "10:00 AM",
+        "venue": "Main Auditorium",
+        "capacity": 100,
+        "fee": 500.0,
+        "status": "Upcoming"
+    },
+    {
+        "id": "EVT-102",
+        "title": "AI & Data Science Workshop",
+        "category": "Workshop",
+        "date": "2026-09-20",
+        "time": "02:00 PM",
+        "venue": "Lab 302",
+        "capacity": 30,
+        "fee": 300.0,
+        "status": "Upcoming"
+    },
+    {
+        "id": "EVT-103",
+        "title": "Annual Hackathon 2026",
+        "category": "Competition",
+        "date": "2026-10-05",
+        "time": "09:00 AM",
+        "venue": "Innovation Hall",
+        "capacity": 60,
+        "fee": 250.0,
+        "status": "Upcoming"
+    },
+    {
+        "id": "EVT-104",
+        "title": "Cyber Security Seminar",
+        "category": "Seminar",
+        "date": "2026-10-12",
+        "time": "11:30 AM",
+        "venue": "Seminar Room B",
+        "capacity": 45,
+        "fee": 200.0,
+        "status": "Upcoming"
+    },
+    {
+        "id": "EVT-105",
+        "title": "Exam",
+        "category": "Technology",
+        "date": "2026-12-1",
+        "time": "10:00 Am",
+        "venue": "CV",
+        "capacity": 100,
+        "fee": 50.0,
+        "status": "Upcoming"
+    },
+    {
+        "id": "EVT-106",
+        "title": "Cloud Computing Workshop",
+        "category": "Workshop",
+        "date": "2026-08-15",
+        "time": "11:00 AM",
+        "venue": "CV",
+        "capacity": 100,
+        "fee": 50.0,
+        "status": "Upcoming"
+    }
+]

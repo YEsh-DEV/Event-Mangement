@@ -1,0 +1,6 @@
+Registration ID,Name,Age,Gender,Organization,Phone,Email,Event Title,Fee,Amount Paid,Payment Status,Payment Mode,Attendance,Certificate Status
+REG-2026-1001,Alex Johnson,21,Male,Tech University,9876543210,alex.j@email.com,Python Developer Summit 2026,500.0,500.0,Paid,UPI,Absent,Not Eligible
+REG-2026-1002,Sophia Martinez,22,Female,City College,9876543211,sophia.m@email.com,AI & Data Science Workshop,300.0,150.0,Partially Paid,Cash,Absent,Not Eligible
+REG-2026-1003,Rohan Sharma,20,Male,Global Institute,9876543212,rohan.s@email.com,Python Developer Summit 2026,500.0,0.0,Pending,N/A,Absent,Not Eligible
+REG-2026-1004,Emily Chen,23,Female,Innovate Labs,9876543213,emily.c@email.com,Annual Hackathon 2026,250.0,250.0,Paid,Credit Card,Present,Eligible
+REG-2026-1005,Yeshwanth,20,Male,SRM AP,45645154,atmaturi@gmail.com,Cloud Computing Workshop,50.0,50.0,Paid,Cash,Present,Eligible

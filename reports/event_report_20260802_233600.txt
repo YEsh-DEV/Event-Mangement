@@ -1,0 +1,38 @@
+======================================================================
+                 EVENT MANAGEMENT SYSTEM REPORT
+Generated On: 2026-08-02 23:36:00
+======================================================================
+
+--- 1. OVERALL EXECUTIVE SUMMARY ---
+Total Events:            6
+Total Participants:      5
+Capacity Occupancy Rate: 1.15%
+Total Fees Expected:     $1600.00
+Total Revenue Collected: $950.00
+Outstanding Dues:        $650.00
+Collection Rate:         59.38%
+Most Popular Event:      Python Developer Summit 2026 (2 participants)
+Top Revenue Event:       Python Developer Summit 2026 ($500.00)
+
+--- 2. EVENTS LIST ---
+ID         Title                          Category        Capacity   Fee ($) 
+-------------------------------------------------------------------------
+EVT-101    Python Developer Summit 2026   Technology      100        500.00  
+EVT-102    AI & Data Science Workshop     Workshop        30         300.00  
+EVT-103    Annual Hackathon 2026          Competition     60         250.00  
+EVT-104    Cyber Security Seminar         Seminar         45         200.00  
+EVT-105    Exam                           Technology      100        50.00   
+EVT-106    Cloud Computing Workshop       Workshop        100        50.00   
+
+--- 3. PARTICIPANT ROSTER & PAYMENT STATUS ---
+Reg ID          Name                 Event                     Status          Paid ($)  
+-------------------------------------------------------------------------------------
+REG-2026-1001   Alex Johnson         Python Developer Summit   Paid            500.00    
+REG-2026-1002   Sophia Martinez      AI & Data Science Works   Partially Paid  150.00    
+REG-2026-1003   Rohan Sharma         Python Developer Summit   Pending         0.00      
+REG-2026-1004   Emily Chen           Annual Hackathon 2026     Paid            250.00    
+REG-2026-1005   Yeshwanth            Cloud Computing Worksho   Paid            50.00     
+
+======================================================================
+                       END OF REPORT
+======================================================================
