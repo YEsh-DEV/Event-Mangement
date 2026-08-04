@@ -1,88 +1,110 @@
-# Event Management System
+# 🤎 EventManager — Desktop Event Management System
 
-## Project Overview
-The **Event Management System** is a modern desktop software application built in Python designed to streamline event organizing, participant registration, payment tracking, attendance logging, analytical reporting, and data exporting.
+[![Python Version](https://img.shields.io/badge/python-3.8+-brown.svg?style=flat-square&logo=python)](https://www.python.org/)
+[![GUI Framework](https://img.shields.io/badge/GUI-CustomTkinter-amber.svg?style=flat-square)](https://github.com/TomSchimansky/CustomTkinter)
+[![Plotting Library](https://img.shields.io/badge/Charts-Matplotlib-orange.svg?style=flat-square)](https://matplotlib.org/)
+[![Data Storage](https://img.shields.io/badge/Database-JSON-yellow.svg?style=flat-square)](https://www.json.org/)
 
-This project was developed as a comprehensive Python university course project demonstrating fundamental and intermediate concepts covered in the Python programming syllabus.
-
----
-
-## Key Features
-
-1. **Event Management**: Create, view, update, and delete events. Each event features customizable title, category, venue, date, time, capacity limit, and registration fee.
-2. **Participant Registration**: Register attendees with validation for contact details. Prevents overbooking by enforcing dynamic event seat capacity limits. Generates unique Registration IDs (`REG-2026-XXXX`).
-3. **Payment Tracking & Dues**: Record payment transactions with multiple payment modes (`UPI`, `Cash`, `Credit/Debit Card`). Automatically categorizes statuses (`Paid`, `Partially Paid`, `Pending`) and tracks remaining dues.
-4. **Attendance & Certificate Verification**: Log participant presence (`Present` / `Absent`). Enforces automated rules for Certificate Eligibility (Requires 100% Fee Paid AND Present status).
-5. **Participant Analytics**: Interactive dashboard presenting key metrics (Total Revenue, Outstanding Dues, Fee Collection Rate %, Occupancy Rate, Gender Demographics, Category Distribution, Top Grossing Event).
-6. **Report Generation & Data Export**: Generate timestamped plain text summary reports (`.txt`) and export structured participant records to CSV spreadsheets (`.csv`).
+A modern, offline-first desktop application built for administrators to easily organize university events, manage attendee registrations, track fee collections, monitor attendance, and analyze metrics. Built entirely in Python using **CustomTkinter** for a polished dark mocha/bronze theme and **Matplotlib** for integrated analytical charts.
 
 ---
 
-## Folder Architecture
+## 📸 Application Screenshots
 
+### 📊 System Dashboard Overview
+![Dashboard Overview](screenshots/fig_7_1_dashboard.png)
+*Real-time metrics, registration donut chart, and revenue bar graph.*
+
+### 📅 Events Management
+![Event Management](screenshots/fig_7_2_events.png)
+*Schedule events, set capacities, track occupied seats, and manage lists.*
+
+### 📝 Participant Registration
+![Participant Registration](screenshots/fig_7_3_registration.png)
+*Register participants with formatting validation and automatic unique Registration ID generation.*
+
+### 💳 Payments Ledger & Outstanding Dues
+![Payment Ledger](screenshots/fig_7_4_payments.png)
+*Record partial/full payments across different modes (UPI, Cash, Card) and calculate dues.*
+
+### 📋 Attendance & Certificate Verification
+![Attendance Log](screenshots/fig_7_5_attendance.png)
+*Mark attendance and verify certificate eligibility dynamically based on payment status and presence.*
+
+### 📈 Participant Demographics & Metrics
+![Analytics Overview](screenshots/fig_7_6_analytics.png)
+*Analyze participant registrations by gender, payment status, and category.*
+
+---
+
+## ✨ Key Features & Functions
+
+- **Top Navigation Bar:** Horizontal layout replacing legacy sidebars with a sleek, space-efficient horizontal pill navigation, live clock, and user badge.
+- **Event Scheduling:** Predefined seats, category tagging, fee configuration, and dynamic seat capacity enforcement.
+- **Form Validation:** Validates email format (regular expressions), mobile phone format, and age constraints (`1` to `120`).
+- **Payment tracking:** Automatically tracks and calculates paid, partial, or pending payment status, transaction modes, and outstanding balances.
+- **Attendance-based Certificates:** Automated rule engine dictates that a participant is only eligible for a certificate if marked `Present` AND payment status is `Paid`.
+- **System Reports & Exports:** Generates text reports (`.txt`) and exports data lists directly to spreadsheet-ready CSV files (`.csv`). Includes a built-in monospace report previewer.
+
+---
+
+## 🛠️ Tech Stack & Requirements
+
+- **Runtime:** Python 3.8+
+- **GUI Engine:** CustomTkinter & Tkinter (fallback support)
+- **Data Visualizations:** Matplotlib
+- **Persistence:** Local JSON Data Files
+
+---
+
+## 🚀 Quick Start Guide
+
+### 1. Clone & Navigate
+```bash
+git clone https://github.com/YEsh-DEV/Event-Mangement.git
+cd Event-Mangement
 ```
-event_management_app/
-├── main.py            # Application entry point
-├── ui.py              # Main GUI application window (CustomTkinter)
-├── events.py          # Event creation, capacity checking, and list management
-├── registration.py    # Participant registration, search, and validation
-├── payments.py        # Payment processing, dues calculation, and transaction recording
-├── attendance.py      # Attendance logging and certificate eligibility rules
-├── analytics.py       # Analytics aggregation engine (revenue, demographics, popular events)
-├── reports.py         # Text report formatter and CSV exporter
-├── utils.py           # JSON file handler, regex validators, and sample seed data
-├── requirements.txt   # Required Python packages (customtkinter)
-├── data/              # Auto-created storage folder (events.json, participants.json)
-├── reports/           # Auto-created export folder (.txt and .csv reports)
-└── README.md          # Project documentation and viva guide
-```
-
----
-
-## Python Syllabus Concepts Demonstrated
-
-- **Variables & Data Types**: Strings, integers, floats, booleans, and datetime timestamps.
-- **Control Flow**: `if-elif-else` conditional logic for validation, payment status, and certificate rules; `for` and `while` loops for dataset searching and aggregation.
-- **Data Structures**:
-  - **Lists**: Storing collections of event and participant records.
-  - **Dictionaries**: Structuring individual participant and event attributes.
-  - **Tuples**: Returning multiple status values from functions `(True, "Success message")`.
-  - **Sets**: Extracting unique category names and event titles.
-- **Functions & Modular Design**: Standard user-defined functions across specialized modules.
-- **File Handling**: JSON data storage (`json.dump`, `json.load`), text report generation (`open()`, `.write()`), and CSV exporting (`csv.writer`).
-- **Exception Handling**: `try-except` blocks for numeric parsing (`ValueError`), file errors (`IOError`), and regex validation.
-- **Object-Oriented Programming (OOP)**: Class structures for GUI application widgets (`ctk.CTk`).
-- **Modules & Libraries**: Standard (`os`, `json`, `csv`, `re`, `random`, `datetime`, `tkinter`, `ttk`) and external (`customtkinter`).
-
----
-
-## Quick Start Guide
-
-### 1. Requirements
-Ensure Python 3.8+ is installed.
 
 ### 2. Install Dependencies
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3. Run Application
+### 3. Run the App
 ```bash
 python main.py
 ```
 
+*Note: On first run, the app automatically pre-populates sample events and participant registrations (in `data/`) so you can test all views instantly.*
+
 ---
 
-## Viva / Explanation Reference Guide
+## 📂 Source Code Architecture
 
-1. **How is data persisted when the app closes?**
-   - Data is stored in JSON files (`data/events.json` and `data/participants.json`) using `json.dump()` and loaded via `json.load()` upon startup in `utils.py`.
+| File | Purpose |
+| :--- | :--- |
+| `main.py` | Launches the CustomTkinter GUI mainloop. |
+| `ui.py` | Contains UI components (`ModernHeader`, `KPICard`, `ChartWidget`) and layout. |
+| `events.py` | Handles event creation, capacity logic, and deletions. |
+| `registration.py` | Handles participant validations, Reg ID generation, and search indexing. |
+| `payments.py` | Updates amounts paid, payment statuses, and aggregates financial metrics. |
+| `attendance.py` | Marks attendance states and verifies certificate rules. |
+| `analytics.py` | Aggregates gender distribution, status breakdown, and handles daily insights. |
+| `reports.py` | Formats data for plain text output and write logs/spreadsheets to CSV. |
+| `utils.py` | Contains validation regex helpers and the JSON storage adapter. |
 
-2. **How does dynamic capacity validation work?**
-   - In `registration.py`, `get_event_enrollment_count()` iterates through all participants registered for an event. If the count reaches `event["capacity"]`, registration is blocked with a user warning.
+---
 
-3. **How is Certificate Eligibility computed?**
-   - In `attendance.py` and `payments.py`, eligibility is dynamically set to `"Eligible"` only when `attendance == "Present"` AND `payment_status == "Paid"`.
+## 🎓 Academic Viva Cheat Sheet
 
-4. **How are reports exported?**
-   - Plain text reports are formatted with string alignments and written to `reports/event_report_TIMESTAMP.txt`. CSV files are generated using Python's built-in `csv` library into `reports/participants_export.csv`.
+**Q: Where and how is application data stored?**  
+A: Data is persisted locally in `data/events.json` and `data/participants.json` using Python's built-in `json` module. It uses `try-except` blocks to handle any missing files or parsing corruptions gracefully.
+
+**Q: How are Matplotlib figures integrated with CustomTkinter?**  
+A: The figures are rendered to Tkinter canvases using the `FigureCanvasTkAgg` backend. Matplotlib drawing resources are cleanly closed on view switches to prevent memory leaks.
+
+**Q: How is Certificate Eligibility verified?**  
+A: In `attendance.py` and `payments.py`, eligibility evaluates `attendance == "Present" and payment_status == "Paid"`.
+
+**Q: How does registration capacity check work?**  
+A: Before saving a participant registration in `registration.py`, the system queries the active enrollment count. If this count matches the event's max capacity, registration is rejected.
