@@ -13,7 +13,10 @@ ANALYTICS_TIPS = [
 ]
 
 def get_random_insight():
-    """Returns a random analytics insight using the random module."""
+    """
+    Returns a random event management tip or best practice tip.
+    Uses random.choice to query tips list.
+    """
     return random.choice(ANALYTICS_TIPS)
 
 def generate_full_analytics():
