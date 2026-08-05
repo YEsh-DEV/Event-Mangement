@@ -54,8 +54,8 @@ def record_payment(reg_id, additional_amount, payment_mode):
 
 def get_payment_summary():
     """
-    Calculates overall payment statistics.
-    Demonstrates loops, dict operations, and numerical aggregation.
+    Calculates overall payment collection metrics and statistics.
+    Aggregates fee expected, amount collected, and unpaid balances.
     """
     participants = get_all_participants()
     total_fee_expected = sum(p["fee"] for p in participants)
