@@ -46,14 +46,20 @@ def save_json(filepath, data):
         return False
 
 def validate_email(email):
-    """Validates email format using regex."""
+    """
+    Validates email format using regular expressions.
+    Checks for user pattern, domain, and TLD.
+    """
     if not email:
         return False
     pattern = r"^[\w\.-]+@[\w\.-]+\.\w+$"
     return bool(re.match(pattern, email.strip()))
 
 def validate_phone(phone):
-    """Validates mobile phone number."""
+    """
+    Validates mobile phone number.
+    Ensures input consists of numeric digits and meets length constraints.
+    """
     if not phone:
         return False
     digits = phone.strip().replace(" ", "").replace("-", "")
