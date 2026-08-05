@@ -3,8 +3,7 @@ from registration import get_all_participants, save_participants
 def mark_attendance(reg_id, status):
     """
     Marks attendance status ('Present' or 'Absent') and evaluates certificate eligibility.
-    Certificate Requirement: Attendance must be 'Present' AND payment_status must be 'Paid'.
-    Demonstrates boolean conditions and compound logic rules.
+    Certificate Eligibility Condition: Present status AND Paid status.
     """
     if status not in ["Present", "Absent"]:
         return False, "Invalid attendance status."
