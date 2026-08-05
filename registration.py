@@ -3,11 +3,17 @@ from utils import PARTICIPANTS_FILE, load_json, save_json, validate_email, valid
 from events import get_event_by_title
 
 def get_all_participants():
-    """Returns all registered participants."""
+    """
+    Fetches the list of all registered participants from JSON storage.
+    Deserializes json array.
+    """
     return load_json(PARTICIPANTS_FILE, [])
 
 def save_participants(participants):
-    """Saves participant list to JSON file."""
+    """
+    Saves the list of all participants to local JSON storage.
+    Serializes list of dictionary objects.
+    """
     return save_json(PARTICIPANTS_FILE, participants)
 
 def get_event_enrollment_count(event_title):
