@@ -3,8 +3,8 @@ from ui import EventManagementApp
 
 def main():
     """
-    Entry point for the Event Management System.
-    Initializes and launches the CustomTkinter graphical application interface.
+    Main application entry point.
+    Initializes configuration, pre-seeds data if empty, and launches CustomTkinter main loop.
     """
     try:
         app = EventManagementApp()
