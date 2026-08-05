@@ -8,8 +8,8 @@ from analytics import generate_full_analytics
 
 def generate_text_report():
     """
-    Generates a timestamped plain-text report.
-    Demonstrates string formatting, file output operations, and timestamping.
+    Generates a timestamped plain-text (.txt) administrative summary report.
+    Organizes total events, participants roster, financial dues, and records.
     """
     ensure_directories()
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
