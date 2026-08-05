@@ -1,11 +1,17 @@
 from utils import EVENTS_FILE, load_json, save_json
 
 def get_all_events():
-    """Returns all created events."""
+    """
+    Retrieves all created events from local storage.
+    Deserializes json array into python dictionaries list.
+    """
     return load_json(EVENTS_FILE, [])
 
 def save_events(events):
-    """Saves the events list to JSON file."""
+    """
+    Saves the list of all events back to local JSON storage.
+    Serializes list of dictionaries.
+    """
     return save_json(EVENTS_FILE, events)
 
 def get_event_by_title(title):
