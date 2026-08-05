@@ -108,3 +108,8 @@ A: In `attendance.py` and `payments.py`, eligibility evaluates `attendance == "P
 
 **Q: How does registration capacity check work?**  
 A: Before saving a participant registration in `registration.py`, the system queries the active enrollment count. If this count matches the event's max capacity, registration is rejected.
+
+---
+
+## 📄 License
+This project is licensed under the MIT License - feel free to use and modify it for academic purposes.
